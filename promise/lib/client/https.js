@@ -18,7 +18,7 @@ const PromiseClientHttps = function(options) {
   jayson.Client.https.apply(this, arguments);
   this.request = promiseUtils.wrapClientRequestMethod(this.request.bind(this));
 };
-require('util').inherits(PromiseClientHttps, jayson.Client.https);
+require('../inherit')(PromiseClientHttps, jayson.Client.https);
 
 module.exports = PromiseClientHttps;
 

@@ -18,7 +18,8 @@ const PromiseClient = function(server, options) {
   jayson.Client.apply(this, arguments);
   this.request = promiseUtils.wrapClientRequestMethod(this.request.bind(this));
 };
-require('util').inherits(PromiseClient, jayson.Client);
+const inherit = require('../inherit')
+inherit(PromiseClient, jayson.Client);
 
 /**
  * @type PromiseClientHttp

@@ -18,6 +18,6 @@ const PromiseClientTcp = function(options) {
   jayson.Client.tcp.apply(this, arguments);
   this.request = promiseUtils.wrapClientRequestMethod(this.request.bind(this));
 };
-require('util').inherits(PromiseClientTcp, jayson.Client.tcp);
+require('../inherit')(PromiseClientTcp, jayson.Client.tcp);
 
 module.exports = PromiseClientTcp;

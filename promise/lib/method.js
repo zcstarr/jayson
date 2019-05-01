@@ -16,7 +16,7 @@ const PromiseMethod = module.exports = function(handler, options) {
   }
   jayson.Method.apply(this, arguments);
 };
-require('util').inherits(PromiseMethod, jayson.Method);
+require('./inherit')(PromiseMethod, jayson.Method);
 
 module.exports = PromiseMethod;
 

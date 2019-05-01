@@ -18,6 +18,6 @@ const PromiseServer = function(methods, options) {
   options.methodConstructor = options.methodConstructor || Method;
   jayson.Server.call(this, methods, options);
 };
-require('util').inherits(PromiseServer, jayson.Server);
+require('./inherit')(PromiseServer, jayson.Server);
 
 module.exports = PromiseServer;

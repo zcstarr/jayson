@@ -18,6 +18,6 @@ const PromiseClientHttp = function(options) {
   jayson.Client.http.apply(this, arguments);
   this.request = promiseUtils.wrapClientRequestMethod(this.request.bind(this));
 };
-require('util').inherits(PromiseClientHttp, jayson.Client.http);
+require('../inherit')(PromiseClientHttp, jayson.Client.http);
 
 module.exports = PromiseClientHttp;

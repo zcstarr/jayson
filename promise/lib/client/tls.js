@@ -18,6 +18,6 @@ const PromiseClientTls = function(options) {
   jayson.Client.tls.apply(this, arguments);
   this.request = promiseUtils.wrapClientRequestMethod(this.request.bind(this));
 };
-require('util').inherits(PromiseClientTls, jayson.Client.tls);
+require('../inherit')(PromiseClientTls, jayson.Client.tls);
 
 module.exports = PromiseClientTls;
